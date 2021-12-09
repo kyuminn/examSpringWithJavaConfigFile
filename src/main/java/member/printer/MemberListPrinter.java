@@ -2,13 +2,15 @@ package member.printer;
 
 import java.util.Collection;
 
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import member.dao.MemberDao;
 import member.vo.Member;
 
 public class MemberListPrinter {
+	@Autowired
 	private MemberDao memberDao;
+	@Autowired
 	private MemberPrinter memberPrinter;
 	
 	public MemberListPrinter(MemberDao memberDao,MemberPrinter memberPrinter) {
